@@ -1,3 +1,3 @@
-#' @useDynLib OPER782.WI2019
+#' @useDynLib OPER782.WI2020
 #' @importFrom Rcpp evalCpp
 NULL
