@@ -6,8 +6,8 @@ output:
   html_document:
     df_print: 'kable'
 params:
-  AL: 26
-  CL: 23
+  LSU: 00
+  CLE: 00
 ---
 
 ```{r setup, echo=FALSE}
@@ -19,16 +19,21 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, echo=FALSE}
 scores <- 
   tibble::tribble(
-~Name,     ~AL, ~CL,
-"Freels",   20,  34,
-"Chon",     00,  00,
-"Walton",   00,  00,
-"Watson",   00,  00
+~Name,       ~LSU, ~CLE,
+"Freels",     00,   00,
+"Chale",      00,   00,
+"Ciaravino",  00,   00,
+"Hufstetler", 00,   00,
+"Lieby",      00,   00,
+"Mayo",       00,   00, 
+"Spangler",   00,   00,
+"Walton",     00,   00,
+"Williams",   00,   00
 )
 ```
 
 ```{r, echo=FALSE}
-scores$diff <- abs(scores$AL - params$AL) + abs(scores$CL - params$CL)
+scores$diff <- abs(scores$LSU - params$LSU) + abs(scores$CLE - params$CLE)
 
 scores$rank <- rank(scores$diff)
 scores[order(scores$rank),]
