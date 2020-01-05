@@ -1,0 +1,456 @@
+---
+title: "Writing R Packages"
+subtitle: "Operationalizing Your Algorithms"
+date: '`r format(Sys.Date(), "%d %B %Y")`'
+footer: "Writing R Packages (1)"
+author: "Jason Freels"
+output: 
+  slidy_presentation:
+    smart: no
+    fig_caption: yes
+graphics: yes
+---
+
+# Overview
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = !FALSE, fig.align = 'center', comment = NA)
+shiny::includeCSS("css/flatly-style.css")
+shiny::includeCSS("css/r-title.css")
+shiny::includeScript("js/jquery.min.js")
+shiny::includeScript("js/jkf-scroll.js")
+```
+
+## What is an R package?
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1">
+- The fundamental unit of shareable code in R
+
+- A collection of functions that is available to the user once the package is installed on the user's device.
+
+- Will often include function help files, vignettes, sample data, and more.
+
+- A convenient way to organize and automate commands that you use frequently.
+</div>
+
+<div id="col2">
+<center>
+<p>
+<img src="images/packager.png" style="width:483px; height:557px; margin-bottom: 50px;">
+</p>
+</center>
+</div>
+</div>
+</div>
+
+## Why Use Packages?
+
+- Organize commonly used code
+
+- Standardizing conventions lead to standardized tools
+
+- Saves time
+
+- Sharing code (inside or outside your org)
+
+# Prerequisites
+
+## Install Required Package-Writing Packages
+
+- Regardless of your operating system, you'll need to install some packages to begin your package-writing career:
+
+- Make sure that you have the following package-writing packages installed
+
+    + `devtools`
+    + `roxygen2`
+    + `testthat`
+    + `knitr`
+    + `pkgbuild`
+    + `usethis`
+    + `rhub`
+
+```{r, eval=FALSE}
+install.packages(c("devtools",
+                   "roxygen2",
+                   "testthat",
+                   "knitr",
+                   "pkgbuild",
+                   "usethis",
+                   "rhub"))
+```
+
+## Setting Up the Proper Environment
+
+- If you’re using Windows, you will need to install Rtools
+
+- After installation, verify that your system can find Rtools. 
+
+    + Run `pkgbuild::has_devel()` in your R console
+    + If your system is set up correctly, the function should return `TRUE`
+
+```{r, eval=FALSE}
+# make sure that your system knows where to find everything you'll need
+pkgbuild::find_rtools()
+
+# make sure that your set up is ready to construct R packages
+pkgbuild::has_devel()
+```
+
+# Creating the Package Framework
+
+## Setting up an R Package Project
+
+- In RStudio select `File` $\rightarrow$ New Project
+
+<img src="images/new-project.png" style="width: 90%; margin-right:5%; margin-left:5%;">
+
+- Alternatively, you also can use one of the following to create the basic package infrastructure
+
+```{r, eval=FALSE}
+devtools::create("path/to/myPackage")
+utils::package.skeleton("myPackage")
+```
+
+    + Running these functions will create a new directory with the package name
+
+    + Note that you'll still need to create
+
+- Also you can use one of the following functions to create the package infrastructure designed for use with C++ compiled code.
+
+```{r, eval=FALSE}
+Rcpp::rcpp.package.skeleton("myPackage")
+RcppArmadillo::RcppArmadillo.package.skeleton("myPackage")
+RcppEigen::RcppEigen.package.skeleton("myPackage")
+RcppParallel::RcppParallel.package.skeleton("myPackage")
+```
+
+## Main Package Components
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1">
+<center>
+<p>
+<img src="images/package-components.png" style="width:100%; margin-bottom: 50px;">
+</p>
+</center>
+</div>
+
+<div id="col2">
+- Every R package has three main components:
+
+    + DESCRIPTION file
+    
+    + NAMESPACE file
+    
+    + An R/ directory containing R code/functions
+</div>
+</div>
+</div>
+
+## Other Package Components
+
+```{r, echo=FALSE}
+Directory = c("man/","src/","data/","examples/","vignettes/","tests/","inst/")
+Description = c("directory of documentation files for exported functions(becomes the help/ directory after compilation)",
+                "directory of compiled code (C++ / C / FORTRAN)	(becomes the libs/ directory after compilation)",
+                "directory of exported datasets (as .Rdata files)", 
+                "directory stand-alone examples",
+                "directory of long-form documentation files or research papers",
+                "directory of function tests",
+                "directory of content not contained elsewhere (everything moves up one-level after compilation)")
+
+knitr::kable(data.frame(Directory, Description))
+```
+
+# The DESCRIPTION & NAMESPACE Files
+
+## The DESCRIPTION File
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1">
+- Must be at the top of the package directory
+
+- Contains package metadata: title, description, authors, current version number, etc.
+
+- Imports: packages containing functions used by your package. These will be automatically installed when your package is installed
+
+- Suggests: packages that will make your set of functions more useful and effective, but aren't necessary
+
+- Depends: packages that provide a core capability to your package (these should be kept to a minimum) 
+</div>
+
+<div id="col2">
+<center>
+<p>
+<img src="images/description.png" style="width:100%; margin-bottom: 50px;">
+</p>
+</center>
+</div>
+</div>
+</div>
+
+## WHAT'S IN A NAME(SPACE)?
+
+- The NAMESPACE file provides a 'space' for 'names'. 
+
+- Provides a context for looking up the value of an object associated with a name
+
+- Make your packages self-contained via imports and exports
+
+- imports: define how functions in your package finds functions in another
+
+- exports: specify which functions in your package are available outside of your package to help avoid conflicts
+
+- We won't edit the NAMESPACE file directly – the `roxygen2` package will allow us to keep everything contained with the function in the .R file
+
+# Packaging the Capabilities of your Package in the R/ Directory
+
+## Writing User-Defined Functions 
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1">
+To have a working R Package you need a set of functions (or data)
+
+We'll create two functions `pv` and `rescale` as examples
+
+- Delete the hello.R file in the R directory & the hello.Rd file in the man directory
+
+- Create two new .R script files, named `pv.R` and `rescale.R` 
+    
+- Save these files in the R/ directory of your package
+</div>
+
+<div id="col2">
+<center>
+<p>
+<img src="images/delete-hello.png" style="width:50%; margin-bottom: 50px;">
+</p>
+<br>
+<p>
+<img src="images/rescale.png" style="width:100%; margin-bottom: 50px;">
+</p>
+</center>
+</div>
+</div>
+</div>
+
+## Some Things to Remember
+
+- Package functions can be stored 
+
+    + All together in one .R file
+
+    + Individually in separate .R files 
+
+    + Some configuration between the two extremes above
+
+- All of these .R scripts should be saved in the R/ directory of your project
+
+- Functions can either be internal or exported
+
+    + Internal functions, or “helper” functions can only be accessed within the project, unless the user calls `:::` to specify an internal function
+
+    + Exported functions are the typical functions that can be accessed anytime once the package has been loaded
+
+- DO NOT call `library()` within a function – use `::` instead 
+
+# Function Fundamentals
+
+## When to write Functions
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1" style="width:60%">
+```{r, eval=FALSE, echo=TRUE}
+df <- data.frame(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+
+df$a <- (df$a - min(df$a, na.rm = TRUE)) / 
+  (max(df$a, na.rm = TRUE) - min(df$a, na.rm = TRUE))
+df$b <- (df$b - min(df$b, na.rm = TRUE)) / 
+  (max(df$a, na.rm = TRUE) - min(df$b, na.rm = TRUE))
+df$c <- (df$c - min(df$c, na.rm = TRUE)) / 
+  (max(df$c, na.rm = TRUE) - min(df$c, na.rm = TRUE))
+df$d <- (df$d - min(df$d, na.rm = TRUE)) / 
+  (max(df$d, na.rm = TRUE) - min(df$d, na.rm = TRUE))
+```
+</div>
+
+<div id="col2" style="width:30%">
+<p></p>
+<br/>
+You should consider writing a function whenever you’ve copied and pasted a block of code more than twice.
+<p></p>
+<br/>
+<p></p>
+<br/>
+<p></p>
+<br/>
+<p></p>
+<br/>
+<p></p>
+<br/>
+<center>Can you spot the error?</center>
+</div>
+</div>
+</div>
+
+
+## Function Overview
+
+- Functions convert input objects into output objects or plots (graphical objects)
+
+- Functions can take any non-graphical object as an argument, even other functions 
+
+- Functions operate on distinct classes of objects (or functions)
+
+- Functions can return objects of the same class as the input objects or create a completely new class of object
+
+
+## Defining Your Own Function
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1" style="width:60%">
+```{r, eval=FALSE, echo=TRUE}
+my_fun <- function(arg1, arg2) {
+  body
+}
+```
+</div>
+
+<div id="col2" style="width:30%">
+<p></p>
+<br/>
+- Functions have 3 parts:
+
+    + formals (aka arguments)
+
+    + body (code inside the function)
+
+    + environment
+</div>
+</div>
+</div>
+
+
+## Defining Your Own Function
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1" style="width:60%">
+```{r, eval=FALSE, echo=TRUE}
+pv <- function(FV, r, n) {
+  present_value <- FV / (1 + r)^n
+  round(present_value, 2)
+}
+```
+</div>
+
+<div id="col2" style="width:30%">
+<p></p>
+<br/>
+- Functions have 3 parts:
+
+    + formals (aka arguments)
+
+    + body (code inside the function)
+
+    + environment
+</div>
+</div>
+</div>
+
+
+## Anatomy of a Function
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1" style="width:60%">
+```{r, echo=TRUE}
+pv <- function(FV, r, n) {
+  present_value <- FV / (1 + r)^n
+  round(present_value, 2)
+}
+```
+
+```{r}
+formals(pv)
+
+body(pv)
+
+environment(pv)
+```
+</div>
+
+<div id="col2" style="width:30%">
+<p></p>
+<br/>
+Functions have 3 parts:
+
+- formals (aka arguments)
+
+- body (code inside the function)
+
+- environment
+</div>
+</div>
+</div>
+
+
+## Function Output
+
+<div id="container2">
+<div id="container1">
+
+<div id="col1" style="width:60%">
+```{r, echo=TRUE}
+pv <- function(FV, r, n) {
+  present_value <- FV / (1 + r)^n
+  round(present_value, 2)
+}
+
+pv(FV = 1000, r = .08, n = 5)
+```
+
+```{r}
+pv2 <- function(FV, r, n) {
+  present_value <- FV / (1 + r)^n
+  return(present_value)
+  round(present_value, 2)
+}
+
+pv2(1000, .08, 5)
+```
+</div>
+
+<div id="col2" style="width:30%">
+<p></p>
+<br/>
+What gets returned from a function is either:
+
+1. The last expression evaluated
+
+2. return(value), which forces the function to stop execution and return value
+</div>
+</div>
+</div>
+
+
