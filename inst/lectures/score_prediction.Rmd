@@ -1,0 +1,35 @@
+---
+title: "2020 College Football National Championship"
+subtitle: "Final Score Prediction"
+date: "January 6, 2020"
+output: 
+  html_document:
+    df_print: 'kable'
+params:
+  AL: 26
+  CL: 23
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Add your scores here
+
+```{r, echo=FALSE}
+scores <- 
+  tibble::tribble(
+~Name,     ~AL, ~CL,
+"Freels",   40,  27,
+"Chon",     00,  00,
+"Walton",   00,  00,
+"Watson",   00,  00
+)
+```
+
+```{r, echo=FALSE}
+scores$diff <- abs(scores$AL - params$AL) + abs(scores$CL - params$CL)
+
+scores$rank <- rank(scores$diff)
+scores[order(scores$rank),]
+```
