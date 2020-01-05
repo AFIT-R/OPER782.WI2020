@@ -1,7 +1,7 @@
-Package: OPER782.WI2019
+Package: OPER782.WI2020
 Type: Package
-Title: Example Functions for OPER 782 - Winter Quarter 2019
-Version: 0.1.0
+Title: Example Functions for OPER 782 - Winter Quarter 2020
+Version: 2020.01.06
 Author: AFIT DSL
 Maintainer: AFIT DSL <jason.freels@afit.edu>
 Description: This package contains a series of functions that 
@@ -18,11 +18,12 @@ Imports: rvest,
          metricsgraphics,
          pacman,
          shinythemes,
-         stats
+         stats,
+         RcppNumerical
 LinkingTo: Rcpp (>= 1.0.0), 
            BH (>= 1.58.0-1),
            RcppEigen,
-           RcppNumerical
+           RcppNumerical,
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
