@@ -46,29 +46,29 @@
 #' @param gap Spacing from \code{min} and \code{max}
 #' @export
 dbeta4 <- function(x, min, max, shape1, shape2, gap = 0) {
-    .Call('_OPER782_WI2019_dbeta4', PACKAGE = 'OPER782.WI2019', x, min, max, shape1, shape2, gap)
+    .Call('_OPER782_WI2020_dbeta4', PACKAGE = 'OPER782.WI2020', x, min, max, shape1, shape2, gap)
 }
 
 #' @export
 #' @rdname beta4
 #' @import RcppNumerical
 pbeta4 <- function(q, min, max, shape1, shape2, gap = 0) {
-    .Call('_OPER782_WI2019_pbeta4', PACKAGE = 'OPER782.WI2019', q, min, max, shape1, shape2, gap)
+    .Call('_OPER782_WI2020_pbeta4', PACKAGE = 'OPER782.WI2020', q, min, max, shape1, shape2, gap)
 }
 
 #' @export
 #' @rdname beta4
 qbeta4 <- function(p, min, max, shape1, shape2) {
-    .Call('_OPER782_WI2019_qbeta4', PACKAGE = 'OPER782.WI2019', p, min, max, shape1, shape2)
+    .Call('_OPER782_WI2020_qbeta4', PACKAGE = 'OPER782.WI2020', p, min, max, shape1, shape2)
 }
 
 #' @export
 #' @rdname beta4
 rbeta4 <- function(n, min, max, shape1, shape2) {
-    .Call('_OPER782_WI2019_rbeta4', PACKAGE = 'OPER782.WI2019', n, min, max, shape1, shape2)
+    .Call('_OPER782_WI2020_rbeta4', PACKAGE = 'OPER782.WI2020', n, min, max, shape1, shape2)
 }
 
 rcpp_hello_world <- function() {
-    .Call('_OPER782_WI2019_rcpp_hello_world', PACKAGE = 'OPER782.WI2019')
+    .Call('_OPER782_WI2020_rcpp_hello_world', PACKAGE = 'OPER782.WI2020')
 }
 
