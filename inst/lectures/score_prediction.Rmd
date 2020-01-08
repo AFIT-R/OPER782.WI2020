@@ -22,7 +22,7 @@ scores <-
 ~Name,       ~LSU, ~CLE,
 "Freels",     00,   00,
 "Chale",      00,   00,
-"Ciaravino",  00,   00,
+"Wilson",     21,   18,
 "Hufstetler", 00,   00,
 "Lieby",      00,   00,
 "Mayo",       00,   00, 
