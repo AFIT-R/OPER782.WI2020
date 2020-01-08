@@ -24,7 +24,7 @@ scores <-
 "Chale",      00,   00,
 "Ciaravino",  00,   00,
 "Hufstetler", 00,   00,
-"Lieby",      00,   00,
+"Leiby",      06,   14,
 "Mayo",       00,   00, 
 "Spangler",   00,   00,
 "Walton",     00,   00,
