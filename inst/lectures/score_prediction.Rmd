@@ -28,7 +28,7 @@ scores <-
 "Mayo",       00,   00, 
 "Spangler",   00,   00,
 "Walton",     00,   00,
-"Williams",   00,   00
+"Williams",   42,   45
 )
 ```
 
