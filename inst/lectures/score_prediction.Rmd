@@ -21,14 +21,14 @@ scores <-
   tibble::tribble(
 ~Name,       ~LSU, ~CLE,
 "Freels",     00,   00,
-"Chale",      00,   00,
-"Ciaravino",  00,   00,
+"Chale",     sample(1:6,1,replace=T),   -4001823,
+"Wilson",     21,   18,
 "Hufstetler", 00,   00,
-"Lieby",      00,   00,
+"Leiby",      06,   14,
 "Mayo",       07,   30, 
 "Spangler",   00,   00,
 "Walton",     00,   00,
-"Williams",   00,   00
+"Williams",   42,   45
 )
 ```
 
