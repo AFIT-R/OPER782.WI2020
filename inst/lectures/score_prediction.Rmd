@@ -25,7 +25,7 @@ scores <-
 "Wilson",     21,   18,
 "Hufstetler", 00,   00,
 "Leiby",      06,   14,
-"Mayo",       00,   00, 
+"Mayo",       07,   30, 
 "Spangler",   00,   00,
 "Walton",     00,   00,
 "Williams",   42,   45
