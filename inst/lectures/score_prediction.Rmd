@@ -27,7 +27,7 @@ scores <-
 "Leiby",      06,   14,
 "Mayo",       07,   30, 
 "Spangler",   00,   00,
-"Walton",     17,   03,
+"Walton",     21,   03,
 "Williams",   42,   45
 )
 ```
