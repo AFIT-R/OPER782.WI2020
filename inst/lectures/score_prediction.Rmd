@@ -23,7 +23,7 @@ scores <-
 "Freels",     00,   00,
 "Chale",      00,   00,
 "Ciaravino",  00,   00,
-"Hufstetler", 00,   00,
+"Hufstetler", 42,   -Inf,
 "Lieby",      00,   00,
 "Mayo",       00,   00, 
 "Spangler",   00,   00,
