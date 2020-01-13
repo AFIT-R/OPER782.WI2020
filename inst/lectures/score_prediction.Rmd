@@ -23,7 +23,7 @@ scores <-
 "Freels",     00,   00,
 "Chale",     sample(1:6,1,replace=T),   -4001823,
 "Wilson",     21,   18,
-"Hufstetler", 00,   00,
+"Hufstetler", 42,   -Inf,
 "Leiby",      06,   14,
 "Mayo",       07,   30, 
 "Spangler",   00,   00,
