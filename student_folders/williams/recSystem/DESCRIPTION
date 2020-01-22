@@ -1,0 +1,24 @@
+Package: recSystem
+Type: Package
+Title: Meta Learning Recommendation System
+Version: 1.0
+Date: 2020-01-13
+Author: person("Clarence", "Williams", email = "clarencew3@gmail.com", role = c("aut", "cre"))
+Maintainer: Clarence Williams <clarencew3@gmail.com>
+Description: This package extracts meta features from a dataset to recommend what machine learning algorithm will perform the best
+  without running all the implemented machine learning algorithms.  The final data product will be a GUI that will ingest a data set 
+  in order to predict a response using classification or regression and display to the user the ranking of the machine learning algorithms on the target data set.
+  The current selection of algorithms is limited to linear regression, ridge regression 
+  and support vector regression for continuous responses and k nearest neighbors classifier,
+  naive bayes classifier and support vector classifier for binary output. Additionally, evaluation metrics for each algorithm include 
+  normalized root mean square error for continuous responses and precision/recall for binary output.  The meta learner utilizes 
+  dimension reduction via Principal Component Analysis and use support vector regression with a gaussian kernel to predict the evaluation metric.
+  The final data product will be a R shiny application as the front end with python integration to call the meta learn recommendation system functions. 
+  Python 3.7 is the required version of python. Numpy 1.17.4, pandas 0.25.1, and sci-kit learn 0.21.3 are the required python packages.
+  While not necessary end users should be familiar with the implemented machine learning algorithms, if they plan to implement the one recommended algorithms.
+  There are no security concerns with this product and there are no design constraints.
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.3)
+LinkingTo: Rcpp
+RoxygenNote: 7.0.2
+Encoding: UTF-8
