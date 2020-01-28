@@ -6,8 +6,8 @@ output:
   html_document:
     df_print: 'kable'
 params:
-  LSU: 00
-  CLE: 00
+  LSU: 42
+  CLE: 25
 ---
 
 ```{r setup, echo=FALSE}
