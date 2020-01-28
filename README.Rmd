@@ -103,7 +103,7 @@ students <- c("Marc Chale",
 
 git_url <- c('https://github.com/chale/reponame',
              'https://github.com/ciaravina/reponame',
-             'https://github.com/hufstetler/reponame',
+             'https://github.com/bjhufstetler/LeapFrog',
              'https://github.com/leiby/reponame',
              'https://github.com/mayo/reponame',
              'https://github.com/spangler/reponame',
