@@ -1,0 +1,43 @@
+1.1 	LeapFrog
+
+1.2 	LeapFrog (LF) is a single agent metaheuristic search algorithm tailored to solve the Traveling Salesman Problem (TSP). It takes a distance and/or a coordinate matrix as input(s) and outputs a solution vector and objective value.
+
+1.3
+	A. Features
+
+		LeapFrog can visualize the best-yet tour (given a coordinate matrix) or the current and best known objective values during execution. After completion LeapFrog will output a list containing the execution level objective value plot, a plot of the best tour route (given a coordinate matrix), the best found objective value, and a vector containing the best found tour.
+	
+	B. User
+
+		LeapFrog is developed for users looking for a fast metaheuristic to solve instances of non-symmetrical Traveling Salesman Problems. Logistic route planners may find LF useful for quickly developing routes to multiple destinations, especially when the directional travel time between locations is not symmetrical. Since LF is single agent, no parallel processing capabilities are required to optimize the solution time.
+	
+	C. Required Knowledge
+		
+		LeapFrog is designed to be easily implemented for users of any skill level. The user is expected to provide either a distance matrix (required for non-symmetrical instances), a coordinate matrix (required for mapping outputs, or is the sole requirement for symmetrical instances), or both. The outputs are straight-forward and easy to understand and present to decision makers.
+	
+	D. Statistical Methods
+
+		LeapFrog utilizes a random removal and insertion approach with a sinusoidal temperature function to create solution vectors. Each wave of the sinusoidal temperature moves the agent to a new solution space to accomplish diversification. As the temperature decreases, the agent explores the current solution space in detail to accomplish intensification.
+	
+	E. Dependencies
+
+		LeapFrog uses the following packages:
+
+			readxl
+			cowplot
+			googleway
+			ggplot2
+			ggrepel
+			ggspatial
+			libwgeom
+			sf
+			rnaturalearth
+			rnaturalearthdata
+			rgeos
+			dplyr
+
+1.4 	LeapFrog is available for download as a .zip file or can be installed in R directly from GitHub using the devtools package.
+
+1.5	There are no security concerns associated with LeapFrog.
+
+1.6	The map output is constrained by visuals found in the packages listed in section 1.3.E.
