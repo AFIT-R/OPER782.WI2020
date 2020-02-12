@@ -5,9 +5,10 @@ output:
   github_document:
     df_print: kable
 ---
- <!-- badges: start -->
+
+<!-- badges: start -->
   [![Travis build status](https://travis-ci.org/clarencew0083/OPER782.WI2020.svg?branch=master)](https://travis-ci.org/clarencew0083/OPER782.WI2020)
-  <!-- badges: end -->
+<!-- badges: end -->
 
 
 Part of the analytic development process is ensuring that the algorithms you develop will be reproducible and portable for an end-user.  Often an end-user’s machine is not configured in the same way as the developer’s – leading to unexpected side effects or errors.  To ensure that your methods are reproducible & portable, your analytic data products will be reviewed on multiple ‘new’ machines representing those used by potential end-users.
