@@ -68,6 +68,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// timesTwo
+Rcpp::List timesTwo(NumericVector vec_in);
+RcppExport SEXP _OPER782_WI2020_timesTwo(SEXP vec_inSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type vec_in(vec_inSEXP);
+    rcpp_result_gen = Rcpp::wrap(timesTwo(vec_in));
+    return rcpp_result_gen;
+END_RCPP
+}
 // psi_update
 Rcpp::List psi_update(Eigen::MatrixXcd PSI, Eigen::MatrixXcd PHI, int Hp);
 RcppExport SEXP _OPER782_WI2020_psi_update(SEXP PSISEXP, SEXP PHISEXP, SEXP HpSEXP) {
@@ -97,6 +108,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_OPER782_WI2020_pbeta4", (DL_FUNC) &_OPER782_WI2020_pbeta4, 6},
     {"_OPER782_WI2020_qbeta4", (DL_FUNC) &_OPER782_WI2020_qbeta4, 5},
     {"_OPER782_WI2020_rbeta4", (DL_FUNC) &_OPER782_WI2020_rbeta4, 5},
+    {"_OPER782_WI2020_timesTwo", (DL_FUNC) &_OPER782_WI2020_timesTwo, 1},
     {"_OPER782_WI2020_psi_update", (DL_FUNC) &_OPER782_WI2020_psi_update, 3},
     {"_OPER782_WI2020_rcpp_hello_world", (DL_FUNC) &_OPER782_WI2020_rcpp_hello_world, 0},
     {NULL, NULL, 0}

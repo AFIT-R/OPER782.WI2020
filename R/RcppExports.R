@@ -69,6 +69,11 @@ rbeta4 <- function(n, min, max, shape1, shape2) {
 }
 
 #' @export
+timesTwo <- function(vec_in) {
+    .Call('_OPER782_WI2020_timesTwo', PACKAGE = 'OPER782.WI2020', vec_in)
+}
+
+#' @export
 NULL
 
 psi_update <- function(PSI, PHI, Hp) {
