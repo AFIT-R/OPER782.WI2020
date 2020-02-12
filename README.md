@@ -1,6 +1,12 @@
 OPER 782 Analytic Deployment Review
 ================
-27 December 2019
+12 February 2020
+
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.org/ryanwalton57/OPER782.WI2020.svg?branch=master)](https://travis-ci.org/ryanwalton57/OPER782.WI2020)
+<!-- badges: end -->
 
 Part of the analytic development process is ensuring that the algorithms
 you develop will be reproducible and portable for an end-user. Often an
@@ -69,18 +75,19 @@ indication of poor engagement by the reviewer.**
       - Cannot be compiled, unusable
 
 The table below lists each developer, the URL of their respective
-project, and the assigned reviewers.
+project, and the assigned
+reviewers.
 
 | Developer          | Git\_URL                                 | Reviewer1          | Reviewer2          |
 | :----------------- | :--------------------------------------- | :----------------- | :----------------- |
-| Marc Chale         | <https://github.com/chale/reponame>      | Benjamin Leiby     | Mark Ciaravino     |
-| Mark Ciaravino     | <https://github.com/ciaravina/reponame>  | Ryan Walton        | Marc Chale         |
-| Brandon Hufstetler | <https://github.com/hufstetler/reponame> | Clarence Williams  | Tyler Spangler     |
-| Benjamin Leiby     | <https://github.com/leiby/reponame>      | Tyler Spangler     | Ryan Walton        |
-| Benjamin Mayo      | <https://github.com/mayo/reponame>       | Brandon Hufstetler | Benjamin Leiby     |
-| Tyler Spangler     | <https://github.com/spangler/reponame>   | Marc Chale         | Brandon Hufstetler |
-| Ryan Walton        | <https://github.com/walton/reponame>     | Benjamin Mayo      | Clarence Williams  |
-| Clarence Williams  | <https://github.com/williams/reponame>   | Mark Ciaravino     | Benjamin Mayo      |
+| Marc Chale         | <https://github.com/chale/reponame>      | Benjamin Leiby     | Tyler Spangler     |
+| Mark Ciaravino     | <https://github.com/ciaravina/reponame>  | Clarence Williams  | Benjamin Leiby     |
+| Brandon Hufstetler | <https://github.com/hufstetler/reponame> | Tyler Spangler     | Benjamin Mayo      |
+| Benjamin Leiby     | <https://github.com/leiby/reponame>      | Ryan Walton        | Brandon Hufstetler |
+| Benjamin Mayo      | <https://github.com/mayo/reponame>       | Brandon Hufstetler | Ryan Walton        |
+| Tyler Spangler     | <https://github.com/spangler/reponame>   | Benjamin Mayo      | Mark Ciaravino     |
+| Ryan Walton        | <https://github.com/walton/reponame>     | Mark Ciaravino     | Clarence Williams  |
+| Clarence Williams  | <https://github.com/williams/reponame>   | Marc Chale         | Marc Chale         |
 
 List of developers, projects, and assigned reviewers for OPER782 (Winter
 2020)
