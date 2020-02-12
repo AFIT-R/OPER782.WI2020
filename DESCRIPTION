@@ -8,7 +8,8 @@ Description: This package contains a series of functions that
              will allow students in the OPER 782 class to 
              experience making a pull request, raising an issue, 
              and other GitHub functionality.
-Depends: R (>= 2.10)
+Depends: R (>= 3.1.0),
+         reticulate
 License: GPL (>= 2)
 Imports: rvest, 
          Rcpp (>= 0.12.14), 
@@ -27,3 +28,5 @@ LinkingTo: Rcpp (>= 1.0.0),
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
+SystemRequirements: python (>= 3.5)
+Archs: i386, x64
