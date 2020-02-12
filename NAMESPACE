@@ -2,8 +2,10 @@
 
 S3method(silly,character)
 S3method(silly,numeric)
+export()
 export(cfbwins)
 export(dbeta4)
+export(def_GH)
 export(my_gadget)
 export(numberize)
 export(password)

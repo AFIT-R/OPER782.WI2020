@@ -73,6 +73,16 @@ timesTwo <- function(vec_in) {
     .Call('_OPER782_WI2020_timesTwo', PACKAGE = 'OPER782.WI2020', vec_in)
 }
 
+<<<<<<< HEAD
+=======
+#' @export
+NULL
+
+psi_update <- function(PSI, PHI, Hp) {
+    .Call('_OPER782_WI2020_psi_update', PACKAGE = 'OPER782.WI2020', PSI, PHI, Hp)
+}
+
+>>>>>>> 6ea8a395828674722b3e8030174ccac9411e65e5
 rcpp_hello_world <- function() {
     .Call('_OPER782_WI2020_rcpp_hello_world', PACKAGE = 'OPER782.WI2020')
 }
