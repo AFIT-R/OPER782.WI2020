@@ -79,6 +79,22 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+<<<<<<< HEAD
+=======
+// psi_update
+Rcpp::List psi_update(Eigen::MatrixXcd PSI, Eigen::MatrixXcd PHI, int Hp);
+RcppExport SEXP _OPER782_WI2020_psi_update(SEXP PSISEXP, SEXP PHISEXP, SEXP HpSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Eigen::MatrixXcd >::type PSI(PSISEXP);
+    Rcpp::traits::input_parameter< Eigen::MatrixXcd >::type PHI(PHISEXP);
+    Rcpp::traits::input_parameter< int >::type Hp(HpSEXP);
+    rcpp_result_gen = Rcpp::wrap(psi_update(PSI, PHI, Hp));
+    return rcpp_result_gen;
+END_RCPP
+}
+>>>>>>> 6ea8a395828674722b3e8030174ccac9411e65e5
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _OPER782_WI2020_rcpp_hello_world() {
@@ -96,6 +112,10 @@ static const R_CallMethodDef CallEntries[] = {
     {"_OPER782_WI2020_qbeta4", (DL_FUNC) &_OPER782_WI2020_qbeta4, 5},
     {"_OPER782_WI2020_rbeta4", (DL_FUNC) &_OPER782_WI2020_rbeta4, 5},
     {"_OPER782_WI2020_timesTwo", (DL_FUNC) &_OPER782_WI2020_timesTwo, 1},
+<<<<<<< HEAD
+=======
+    {"_OPER782_WI2020_psi_update", (DL_FUNC) &_OPER782_WI2020_psi_update, 3},
+>>>>>>> 6ea8a395828674722b3e8030174ccac9411e65e5
     {"_OPER782_WI2020_rcpp_hello_world", (DL_FUNC) &_OPER782_WI2020_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
