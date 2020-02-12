@@ -68,6 +68,18 @@ rbeta4 <- function(n, min, max, shape1, shape2) {
     .Call('_OPER782_WI2020_rbeta4', PACKAGE = 'OPER782.WI2020', n, min, max, shape1, shape2)
 }
 
+#' @export
+timesTwo <- function(vec_in) {
+    .Call('_OPER782_WI2020_timesTwo', PACKAGE = 'OPER782.WI2020', vec_in)
+}
+
+#' @export
+NULL
+
+psi_update <- function(PSI, PHI, Hp) {
+    .Call('_OPER782_WI2020_psi_update', PACKAGE = 'OPER782.WI2020', PSI, PHI, Hp)
+}
+
 rcpp_hello_world <- function() {
     .Call('_OPER782_WI2020_rcpp_hello_world', PACKAGE = 'OPER782.WI2020')
 }
