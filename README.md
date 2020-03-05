@@ -2,6 +2,12 @@ OPER 782 Analytic Deployment Review
 ================
 05 March 2020
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.org/AFIT-R/OPER782.WI2020.svg?branch=master)](https://travis-ci.org/AFIT-R/OPER782.WI2020)
+<!-- badges: end -->
+
 Part of the analytic development process is ensuring that the algorithms
 you develop will be reproducible and portable for an end-user. Often an
 end-user’s machine is not configured in the same way as the developer’s
