@@ -17,7 +17,6 @@
 #'  cfbwins(school = "Army")
 #'  }
 #' @export
-
 cfbwins <- function(rank = NULL, school = "Notre Dame") {
   # scrape table data
   table <- rvest::html_text(
