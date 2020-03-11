@@ -98,22 +98,20 @@ reviews <- function(n.choices = 13) {
 
 ```{r, echo=FALSE}
 students <- c("Marc Chale",
-              "Mark Ciaravino",
               "Brandon Hufstetler",
               "Benjamin Leiby",
               "Benjamin Mayo",
-              "Tyler Spangler",
               "Ryan Walton",
-              "Clarence Williams")
+              "Clarence Williams",
+              "Clayton Wilson")
 
-git_url <- c('https://github.com/chale/reponame',
-             'https://github.com/ciaravina/reponame',
-             'https://github.com/hufstetler/reponame',
-             'https://github.com/leiby/reponame',
-             'https://github.com/mayo/reponame',
-             'https://github.com/spangler/reponame',
-             'https://github.com/walton/reponame',
-             'https://github.com/williams/reponame')
+git_url <- c('https://github.com/marcchale/Rexis',
+             "https://github.com/bjhufstetler/LeapFrog",
+             'https://github.com/mrkaliv/logreg',
+             'https://github.com/HarmonicAnova21/Frame.BuildR',
+             'https://github.com/ryanwalton57/allyR',
+             'https://github.com/clarencew0083/recSystem',
+             "https://github.com/clawilso15/Text.Replace")
 ```
 
 The table below lists each developer, the URL of their respective project, and the assigned reviewers. 
