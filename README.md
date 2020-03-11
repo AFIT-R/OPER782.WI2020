@@ -1,11 +1,11 @@
 OPER 782 Analytic Deployment Review
 ================
-12 February 2020
+11 March 2020
 
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/clawilso15/OPER782.WI2020.svg?branch=master)](https://travis-ci.org/clawilso15/OPER782.WI2020)
+status](https://travis-ci.org/AFIT-R/OPER782.WI2020.svg?branch=master)](https://travis-ci.org/AFIT-R/OPER782.WI2020)
 <!-- badges: end -->
 
 Part of the analytic development process is ensuring that the algorithms
@@ -77,16 +77,15 @@ indication of poor engagement by the reviewer.**
 The table below lists each developer, the URL of their respective
 project, and the assigned reviewers.
 
-| Developer          | Git\_URL                                 | Reviewer1          | Reviewer2          |
-| :----------------- | :--------------------------------------- | :----------------- | :----------------- |
-| Marc Chale         | <https://github.com/chale/reponame>      | Brandon Hufstetler | Ryan Walton        |
-| Mark Ciaravino     | <https://github.com/ciaravina/reponame>  | Benjamin Leiby     | Clarence Williams  |
-| Brandon Hufstetler | <https://github.com/hufstetler/reponame> | Marc Chale         | Benjamin Leiby     |
-| Benjamin Leiby     | <https://github.com/leiby/reponame>      | Tyler Spangler     | Brandon Hufstetler |
-| Benjamin Mayo      | <https://github.com/mayo/reponame>       | Clarence Williams  | Mark Ciaravino     |
-| Tyler Spangler     | <https://github.com/spangler/reponame>   | Benjamin Mayo      | Marc Chale         |
-| Ryan Walton        | <https://github.com/walton/reponame>     | Mark Ciaravino     | Tyler Spangler     |
-| Clarence Williams  | <https://github.com/williams/reponame>   | Ryan Walton        | Benjamin Mayo      |
+| Developer          | Git\_URL                                          | Reviewer1          | Reviewer2          |
+| :----------------- | :------------------------------------------------ | :----------------- | :----------------- |
+| Marc Chale         | <https://github.com/marcchale/Rexis>              | Clarence Williams  | Ryan Walton        |
+| Brandon Hufstetler | <https://github.com/bjhufstetler/LeapFrog>        | Benjamin Leiby     | Benjamin Mayo      |
+| Benjamin Leiby     | <https://github.com/mrkaliv/logreg>               | Marc Chale         | Clarence Williams  |
+| Benjamin Mayo      | <https://github.com/HarmonicAnova21/FRame.BuildR> | Ryan Walton        | Benjamin Leiby     |
+| Ryan Walton        | <https://github.com/ryanwalton57/allyR>           | Clayton Wilson     | Marc Chale         |
+| Clarence Williams  | <https://github.com/clarencew0083/recSystem>      | Benjamin Mayo      | Brandon Hufstetler |
+| Clayton Wilson     | <https://github.com/clawilso15/Text.Replace>      | Brandon Hufstetler | Clayton Wilson     |
 
 List of developers, projects, and assigned reviewers for OPER782 (Winter
 2020)

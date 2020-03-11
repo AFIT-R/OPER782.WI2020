@@ -6,3 +6,4 @@ hidden/
 src/*.dll
 src/*.o
 src/*.so
+inst/doc
