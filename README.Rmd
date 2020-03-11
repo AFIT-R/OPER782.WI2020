@@ -108,7 +108,7 @@ students <- c("Marc Chale",
 git_url <- c('https://github.com/marcchale/Rexis',
              "https://github.com/bjhufstetler/LeapFrog",
              'https://github.com/mrkaliv/logreg',
-             'https://github.com/HarmonicAnova21/Frame.BuildR',
+             'https://github.com/HarmonicAnova21/FRame.BuildR',
              'https://github.com/ryanwalton57/allyR',
              'https://github.com/clarencew0083/recSystem',
              "https://github.com/clawilso15/Text.Replace")

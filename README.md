@@ -79,13 +79,13 @@ project, and the assigned reviewers.
 
 | Developer          | Git\_URL                                          | Reviewer1          | Reviewer2          |
 | :----------------- | :------------------------------------------------ | :----------------- | :----------------- |
-| Marc Chale         | <https://github.com/marcchale/Rexis>              | Clayton Wilson     | Brandon Hufstetler |
-| Brandon Hufstetler | <https://github.com/bjhufstetler/LeapFrog>        | Benjamin Leiby     | Marc Chale         |
-| Benjamin Leiby     | <https://github.com/mrkaliv/logreg>               | Clarence Williams  | Benjamin Mayo      |
-| Benjamin Mayo      | <https://github.com/HarmonicAnova21/Frame.BuildR> | Ryan Walton        | Benjamin Leiby     |
-| Ryan Walton        | <https://github.com/ryanwalton57/allyR>           | Marc Chale         | Clarence Williams  |
-| Clarence Williams  | <https://github.com/clarencew0083/recSystem>      | Brandon Hufstetler | Ryan Walton        |
-| Clayton Wilson     | <https://github.com/clawilso15/Text.Replace>      | Benjamin Mayo      | Clayton Wilson     |
+| Marc Chale         | <https://github.com/marcchale/Rexis>              | Brandon Hufstetler | Clayton Wilson     |
+| Brandon Hufstetler | <https://github.com/bjhufstetler/LeapFrog>        | Benjamin Mayo      | Clarence Williams  |
+| Benjamin Leiby     | <https://github.com/mrkaliv/logreg>               | Clayton Wilson     | Benjamin Mayo      |
+| Benjamin Mayo      | <https://github.com/HarmonicAnova21/FRame.BuildR> | Ryan Walton        | Marc Chale         |
+| Ryan Walton        | <https://github.com/ryanwalton57/allyR>           | Marc Chale         | Benjamin Leiby     |
+| Clarence Williams  | <https://github.com/clarencew0083/recSystem>      | Benjamin Leiby     | Ryan Walton        |
+| Clayton Wilson     | <https://github.com/clawilso15/Text.Replace>      | Clarence Williams  | Brandon Hufstetler |
 
 List of developers, projects, and assigned reviewers for OPER782 (Winter
 2020)
