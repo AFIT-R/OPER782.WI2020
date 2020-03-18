@@ -1,0 +1,43 @@
+---
+title: 'recSystem Review: Wilson'
+author: "Clayton Wilson"
+date: "3/18/2020"
+output: html_document
+---
+
+Accuracy
+    
+  - Are the results accurate?
+  
+      *Reviewer: Since I'm unfamiliar with the machine learning aspect of the package, the consolidated results in the provided example code helped in the interpretation. Not having the required background, I'm unable to determine the accuracy of the algorithm without further analysis into the thesis and other algorithms to compare.*
+      
+  - Is it clear how the results were computed?
+  
+      *Reviewer: The documentation discusses what is occurring when executing commands. The vignette displays more detailed information for the user to understand how the analytic is computing. Currently, this requires the user to download the project package as discussed below.*
+      
+Compilation
+    
+  - Did the analytic work? (i.e. install correctly, startup correctly)
+        
+      *Reviewer: Since I did not have the noted python requirements, I received errors related to that during the initial install. I recommend including some additional installation commands to create the necessary environment within R before attempting to install the package. This will help reduce other users encountering similar errors when installing the package. The Shiny app loaded correctly but did not specify a data format so I received an error when trying a different data set.*
+        
+  - Were errors encountered when executing code according to the
+        documentation?
+        
+      *Reviewer:  The GitHub README indicated running "vignette('recSystem')" however the system could not find the object. It was viewable after downloading the project and then knitting it. Also, upon exiting the Shiny App, my instance of R crashes. I'm unsure if it is an error on my environment or an error within the package.*
+
+Ease of use
+    
+  - Is it clear how to use the analytic? (i.e. is the documentation clear)
+        
+      *Reviewer: The provided vignette includes a detailed discussion of the algorithm. However, it is unclear as to the type and format of data expected other than the provided sample.  The recommend2 function identifies that it requires a dataframe as an input but I'm unable to determine the required format since there is no sample raw data to review.*
+        
+  - Are the visualizations/plots interpretable?
+  
+      *Reviewer: The only visualizations provided were part of the Shiny App. The app functioned well aside from the error mentioned earlier.*
+      
+Final Grade
+
+  - Please provide a final grade
+
+      *Reviewer: Based the above evaluation, I would recommend an excellent grade (45/50) with some improvements to initial documentation install. Also, correcting the errors with the provided sample vignette code and specifying data format for included functions. Lastly, all of the proposed features were implemented as stated in proposal #2.*
