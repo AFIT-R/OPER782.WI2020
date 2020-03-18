@@ -1,0 +1,43 @@
+---
+title: 'Rexis Review: Wilson'
+author: "Clayton Wilson"
+date: "3/18/2020"
+output: html_document
+---
+
+Accuracy
+    
+  - Are the results accurate?
+  
+      *Reviewer: The limited documentation does not explain what is occurring and therefore cannot be validated as accurate. However, the anlaytic seemed to perform accurately when trying other data sets - urine and framinham2 - in addition to the identified heart file in the README.*
+      
+  - Is it clear how the results were computed?
+  
+      *Reviewer: As stated above, it is unknown how the results were computed aside from the introductory paragraph on the GitHub README file. The console does show that the function is executing multiple iterations along with print statements as it performs different subtasks.*
+      
+Compilation
+    
+  - Did the analytic work? (i.e. install correctly, startup correctly)
+        
+      *Reviewer: Since I did not have the noted python requirements, I received errors related to that during the initial install. I recommend including some additional installation commands to create the necessary environment within R before attempting to install the package. This will help reduce other users encountering similar errors when installing the package. Once the required environment was updated, both the App and commandline executed successfully when using the provided data.  Currently, the data is only available when downloading the project package. *
+        
+  - Were errors encountered when executing code according to the
+        documentation?
+        
+      *Reviewer: Attempting to execute the recommended command on the GitHub README returned an error of not existing. Inspecting the command, it appears that the package specific command is mistyped. Also, upon exiting the Shiny App, my instance of R crashes. I'm unsure if it is an error on my environment or an error within the package.*
+
+Ease of use
+    
+  - Is it clear how to use the analytic? (i.e. is the documentation clear)
+        
+      *Reviewer: The documentation for rexicute and rexicuteshiny is sparse. It requires a csv file but doesn't indicate the required format. It is unclear as to the use of the analytic from the description files aside from the GitHub README introduction. Upon reviewing the data.R file I found that the heart data was attempted to export but still had the psc label confusing me. Also, the help file for the heart data is essentially empty so I have no idea what data format to provide the function. The provided raw files in the project package can aide in supplying future data sets.*
+        
+  - Are the visualizations/plots interpretable?
+  
+      *Reviewer: When using the provided data in the project package the chart successfully rendered both in RStudio and the Shiny App.  The chart using the identified heart.csv is readable however the text is on the smaller side. I'd recommend reorganizing the app have the loaded data on another page so that the chart has improved readability.*
+      
+Final Grade
+
+  - Please provide a final grade
+
+      *Reviewer: Based on the above evaluation, I would recommend a satisfactory grade (40/50) with many documentation updates required. While the proposed tasks appear to be completed, the significant documentation updates required is what influenced the recommendation the most.*
